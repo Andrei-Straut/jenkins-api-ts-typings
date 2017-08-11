@@ -19,10 +19,11 @@
     "node": ">=6.0.0"
   },
   "scripts": {
+    "prebuild": "rimraf dist && npm run clean",
+    "build": "tsc && rollup -c && rimraf compiled && typedoc --out dist/docs --target es6 --theme minimal src && npm run git-info",
+    "build-pkg": "npm run build && npm pack && npm run copy-files && npm run clean",
+	
     "lint": "tslint --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.{ts,tsx}''",
-    "prebuild": "rimraf dist",
-    "build": "tsc && rollup -c && rimraf compiled && typedoc --out dist/docs --target es6 --theme minimal src",
-    "build-pkg": "tsc && rollup -c && rimraf compiled && typedoc --out dist/docs --target es6 --theme minimal src && copyfiles package.json dist",
     "start": "tsc-watch --onSuccess \"rollup -c\"",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -32,7 +33,11 @@
     "commit": "git-cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+	
+	"clean": "rimraf *.tgz",
+	"copy-files": "copyfiles package.json *.tgz dist",
+	"git-info": "git log -1 > dist/gitinfo"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [

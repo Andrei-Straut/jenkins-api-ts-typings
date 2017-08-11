@@ -27,12 +27,10 @@ In the project's root folder, after git clone:
 npm install
 npm run build-pkg
 ```
-This generates the full unpacked artifact (including ```package.json```) in the ```/dist``` folder.
-Optionally, if you want to generate a .tar.gz:
-```
-npm run build
-npm pack
-```
+This generates in the ```/dist``` folder:
+- the full unpacked artifact (including the git revision built - ```gitinfo```)
+- the library's packed artifact file (.tar.gz)
+
 ### Run tests:
 ```
 npm run test
