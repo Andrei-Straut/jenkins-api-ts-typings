@@ -1,0 +1,10 @@
+{
+    "_class": "hudson.model.User",
+    "absoluteUrl": "http://www.someurl.net/andrei.straut",
+    "description": "Master Jenkins User",
+    "fullName": "andrei.straut",
+    "id": "andrei.straut.id",
+    "property": [{
+        "_class": "jenkins.security.ApiTokenProperty"
+    }]
+}

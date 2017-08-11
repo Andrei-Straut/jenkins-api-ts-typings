@@ -1,0 +1,28 @@
+{
+    "_class": "hudson.plugins.git.GitChangeSet",
+    "affectedPaths": [
+        "folder1/folder2/com.folder1.folder2.folder3/folder3/Class1.java",
+        "folder4/folder5/com.folder6.folder7.folder8/folder8/Class2.java"
+    ],
+    "commitId": "c2f03f0997510f07f9638ab0c66376e3c1fff8fe",
+    "timestamp": 1501753050000,
+    "author": {
+        "absoluteUrl": "https://someurl.net/user/andrei.straut",
+        "fullName": "andrei.straut"
+    },
+    "authorEmail": "andrei.straut@somedomain.com",
+    "comment": "Test Commit Comment\n",
+    "date": "2017-08-03 10:37:30 +0100",
+    "id": "c2f03f0997510f07f9638ab0c66376e3c1fff8fe",
+    "msg": "Test Commit Comment",
+    "paths": [
+        {
+            "editType": "add",
+            "file": "folder1/folder2/com.folder1.folder2.folder3/folder3/Class1.java"
+        },
+        {
+            "editType": "edit",
+            "file": "folder4/folder5/com.folder6.folder7.folder8/folder8/Class2.java"
+        }
+    ]
+}

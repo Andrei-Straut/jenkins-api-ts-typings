@@ -1,0 +1,89 @@
+{
+    "_class": "hudson.maven.MavenModuleSet",
+    "actions": [{}, {}, null, {}, {}, {}, {}, {}, {}, {
+        "_class": "com.cloudbees.plugins.credentials.ViewCredentialsAction"
+    }],
+    "description": "",
+    "displayName": "GAPS-release",
+    "displayNameOrNull": null,
+    "fullDisplayName": "GAPS-release",
+    "fullName": "GAPS-release",
+    "name": "GAPS-release",
+    "url": "https://www.andreistraut.info/jenkins/job/GAPS-release/",
+    "buildable": true,
+    "builds": [{
+        "_class": "hudson.maven.MavenModuleSetBuild",
+        "number": 2,
+        "url": "https://www.andreistraut.info/jenkins/job/GAPS-release/2/"
+    }, {
+        "_class": "hudson.maven.MavenModuleSetBuild",
+        "number": 1,
+        "url": "https://www.andreistraut.info/jenkins/job/GAPS-release/1/"
+    }],
+    "color": "blue",
+    "firstBuild": {
+        "_class": "hudson.maven.MavenModuleSetBuild",
+        "number": 1,
+        "url": "https://www.andreistraut.info/jenkins/job/GAPS-release/1/"
+    },
+    "healthReport": [{
+        "description": "Test Result: 0 tests failing out of a total of 457 tests.",
+        "iconClassName": "icon-health-80plus",
+        "iconUrl": "health-80plus.png",
+        "score": 100
+    }, {
+        "description": "Coverage: All coverage targets have been met. ",
+        "iconClassName": "icon-health-80plus",
+        "iconUrl": "health-80plus.png",
+        "score": 100
+    }, {
+        "description": "Build stability: No recent builds failed.",
+        "iconClassName": "icon-health-80plus",
+        "iconUrl": "health-80plus.png",
+        "score": 100
+    }],
+    "inQueue": false,
+    "keepDependencies": false,
+    "lastBuild": {
+        "_class": "hudson.maven.MavenModuleSetBuild",
+        "number": 2,
+        "url": "https://www.andreistraut.info/jenkins/job/GAPS-release/2/"
+    },
+    "lastCompletedBuild": {
+        "_class": "hudson.maven.MavenModuleSetBuild",
+        "number": 2,
+        "url": "https://www.andreistraut.info/jenkins/job/GAPS-release/2/"
+    },
+    "lastFailedBuild": null,
+    "lastStableBuild": {
+        "_class": "hudson.maven.MavenModuleSetBuild",
+        "number": 2,
+        "url": "https://www.andreistraut.info/jenkins/job/GAPS-release/2/"
+    },
+    "lastSuccessfulBuild": {
+        "_class": "hudson.maven.MavenModuleSetBuild",
+        "number": 2,
+        "url": "https://www.andreistraut.info/jenkins/job/GAPS-release/2/"
+    },
+    "lastUnstableBuild": null,
+    "lastUnsuccessfulBuild": null,
+    "nextBuildNumber": 3,
+    "property": [{
+        "_class": "com.coravy.hudson.plugins.github.GithubProjectProperty"
+    }, {
+        "_class": "com.sonyericsson.rebuild.RebuildSettings"
+    }],
+    "queueItem": null,
+    "concurrentBuild": false,
+    "downstreamProjects": [],
+    "scm": {
+        "_class": "hudson.plugins.git.GitSCM"
+    },
+    "upstreamProjects": [],
+    "modules": [{
+        "name": "com.andreistraut:gaps",
+        "url": "https://www.andreistraut.info/jenkins/job/GAPS-release/com.andreistraut$gaps/",
+        "color": "blue",
+        "displayName": "GAPS"
+    }]
+}

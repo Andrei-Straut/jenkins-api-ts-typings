@@ -1,0 +1,72 @@
+{
+    "_class": "hudson.maven.MavenModuleSetBuild",
+    "actions": [{
+        "_class": "hudson.model.CauseAction",
+        "causes": [{
+            "_class": "hudson.model.Cause$UserIdCause",
+            "shortDescription": "Started by user Andrei Straut",
+            "userId": "andreistraut",
+            "userName": "Andrei Straut"
+        }]
+    }, {
+        "_class": "hudson.plugins.git.util.BuildData",
+        "buildsByBranchName": {
+            "refs/remotes/origin/release": {
+                "_class": "hudson.plugins.git.util.Build",
+                "buildNumber": 10,
+                "buildResult": null,
+                "marked": {
+                    "SHA1": "da6b0a3db930dd8d90a73fdf8d7cbcf93da21d13",
+                    "branch": [{
+                        "SHA1": "da6b0a3db930dd8d90a73fdf8d7cbcf93da21d13",
+                        "name": "refs/remotes/origin/release"
+                    }]
+                },
+                "revision": {
+                    "SHA1": "da6b0a3db930dd8d90a73fdf8d7cbcf93da21d13",
+                    "branch": [{
+                        "SHA1": "da6b0a3db930dd8d90a73fdf8d7cbcf93da21d13",
+                        "name": "refs/remotes/origin/release"
+                    }]
+                }
+            }
+        },
+        "lastBuiltRevision": {
+            "SHA1": "da6b0a3db930dd8d90a73fdf8d7cbcf93da21d13",
+            "branch": [{
+                "SHA1": "da6b0a3db930dd8d90a73fdf8d7cbcf93da21d13",
+                "name": "refs/remotes/origin/release"
+            }]
+        },
+        "remoteUrls": ["https://github.com/Andrei-Straut/andreistraut.info"],
+        "scmName": ""
+    }, {
+        "_class": "hudson.plugins.git.GitTagAction"
+    }, {}, {
+        "_class": "hudson.maven.reporters.MavenAggregatedArtifactRecord"
+    }, {}, {}, {}, {}],
+    "artifacts": [],
+    "building": false,
+    "description": null,
+    "displayName": "#10",
+    "duration": 19196,
+    "estimatedDuration": 19018,
+    "executor": null,
+    "fullDisplayName": "andreistraut.info-release #10",
+    "id": "10",
+    "keepLog": false,
+    "number": 10,
+    "queueId": 41,
+    "result": "SUCCESS",
+    "timestamp": 1500540395836,
+    "url": "https://www.andreistraut.info/jenkins/job/andreistraut.info-release/10/",
+    "builtOn": "",
+    "changeSet": {
+        "_class": "hudson.plugins.git.GitChangeSetList",
+        "items": [],
+        "kind": "git"
+    },
+    "culprits": [],
+    "mavenArtifacts": {},
+    "mavenVersionUsed": "3.3.9"
+}

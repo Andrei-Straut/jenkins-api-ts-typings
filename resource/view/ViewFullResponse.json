@@ -1,0 +1,58 @@
+{
+    "_class": "hudson.model.AllView",
+    "description": "<h1>All projects source code CI</h1>",
+    "jobs": [
+        {
+            "_class": "hudson.maven.MavenModuleSet",
+            "name": "andreistraut.info-master",
+            "url": "https://www.andreistraut.info/jenkins/job/andreistraut.info-master/",
+            "color": "blue"
+        },
+        {
+            "_class": "hudson.maven.MavenModuleSet",
+            "name": "andreistraut.info-release",
+            "url": "https://www.andreistraut.info/jenkins/job/andreistraut.info-release/",
+            "color": "blue"
+        },
+        {
+            "_class": "hudson.maven.MavenModuleSet",
+            "name": "DRP-master",
+            "url": "https://www.andreistraut.info/jenkins/job/DRP-master/",
+            "color": "blue"
+        },
+        {
+            "_class": "hudson.maven.MavenModuleSet",
+            "name": "DRP-release",
+            "url": "https://www.andreistraut.info/jenkins/job/DRP-release/",
+            "color": "blue"
+        },
+        {
+            "_class": "hudson.maven.MavenModuleSet",
+            "name": "GAPS-master",
+            "url": "https://www.andreistraut.info/jenkins/job/GAPS-master/",
+            "color": "blue"
+        },
+        {
+            "_class": "hudson.maven.MavenModuleSet",
+            "name": "GAPS-release",
+            "url": "https://www.andreistraut.info/jenkins/job/GAPS-release/",
+            "color": "blue"
+        },
+        {
+            "_class": "hudson.maven.MavenModuleSet",
+            "name": "Monkins-master",
+            "url": "https://www.andreistraut.info/jenkins/job/Monkins-master/",
+            "color": "blue"
+        },
+        {
+            "_class": "hudson.maven.MavenModuleSet",
+            "name": "Monkins-release",
+            "url": "https://www.andreistraut.info/jenkins/job/Monkins-release/",
+            "color": "blue"
+        }
+    ],
+    "name": "all",
+    "property": [
+    ],
+    "url": "https://www.andreistraut.info/jenkins/"
+}
