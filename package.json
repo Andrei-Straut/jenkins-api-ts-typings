@@ -12,7 +12,7 @@
   "author": "Andrei Straut <andrei.straut@gmail.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Andrei-Straut/jenkins-api-ts-typings.git"
   },
   "license": "MIT",
   "engines": {
