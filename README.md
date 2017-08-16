@@ -1,4 +1,4 @@
-[![Build Status](https://www.andreistraut.info/jenkins/buildStatus/icon?job=Jenkins-API-TS-Typings-master&build=15)](https://www.andreistraut.info/jenkins/job/Jenkins-API-TS-Typings-master/15/)
+[![Build Status](https://www.andreistraut.info/jenkins/buildStatus/icon?job=Jenkins-API-TS-Typings-master)](https://www.andreistraut.info/jenkins/job/Jenkins-API-TS-Typings-master)
 
 # Jenkins JSON API TypeScript Typings
 NPM: https://www.npmjs.com/package/jenkins-api-ts-typings  
