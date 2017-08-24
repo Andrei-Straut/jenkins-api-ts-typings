@@ -1,4 +1,4 @@
-[![Build Status](https://www.andreistraut.info/jenkins/buildStatus/icon?job=Jenkins-API-TS-Typings-master)](https://www.andreistraut.info/jenkins/job/Jenkins-API-TS-Typings-master) [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://www.andreistraut.info/jenkins/buildStatus/icon?job=Jenkins-API-TS-Typings-master)](https://www.andreistraut.info/jenkins/job/Jenkins-API-TS-Typings-master) [![Tests](https://img.shields.io/jenkins/t/https/www.andreistraut.info/jenkins/view/All/job/Jenkins-API-TS-Typings-master.svg)](https://www.andreistraut.info/jenkins/view/All/job/Jenkins-API-TS-Typings-master/) [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 # Jenkins JSON API TypeScript Typings
 NPM: https://www.npmjs.com/package/jenkins-api-ts-typings  
