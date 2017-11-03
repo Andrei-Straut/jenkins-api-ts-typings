@@ -60,6 +60,13 @@ let build: IJenkinsBuild = new JenkinsBuild();
 build.fromJsonString(jsonText);
 ```
 
+or, more simply, without using ```JSON.stringify``` (since version 0.3.0):
+```javascript
+let json = // some JSON
+let build: IJenkinsBuild = new JenkinsBuild();
+build.fromJson(jsonText);
+```
+
 ## Features and limitations
 - Some of the types are not as of yet supported, and as such are defined as ```any``` within their containing objects:
 -- Job: actions, health report, property, queue item, scm, modules

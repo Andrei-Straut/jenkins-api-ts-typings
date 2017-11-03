@@ -4,7 +4,7 @@ import { IJenkinsView}          from './jenkins-api-ts-typings';
 import { IJenkinsJob }          from './jenkins-api-ts-typings';
 
 export class JenkinsView implements IJenkinsView {
-    jsonData:           string;
+    jsonData:           JSON;
     
     name:               string;
     url:                string;
@@ -21,12 +21,36 @@ export class JenkinsView implements IJenkinsView {
     }
     
     getJsonData(): string {
-        return this.jsonData;
+        return JSON.stringify(this.jsonData);
     }
     
     public fromJsonString(json: string) {
-        this.jsonData = json;
         let data:JSON = JSON.parse(json);
+        this.jsonData = data;
+        
+        if(data.hasOwnProperty("name")) {
+            this.name = (data as any)["name"];
+        }
+        
+        if(data.hasOwnProperty("url")) {
+            this.url = (data as any)["url"];
+        }
+        
+        if(data.hasOwnProperty("description")) {
+            this.description = (data as any)["description"];
+        }
+        
+        if(data.hasOwnProperty("_class")) {
+            this._class = (data as any)["_class"];
+        }
+        
+        if(data.hasOwnProperty("property")) {
+            this.property = (data as any)["property"];
+        }
+    }
+    
+    public fromJson(data: JSON) {
+        this.jsonData = data;
         
         if(data.hasOwnProperty("name")) {
             this.name = (data as any)["name"];

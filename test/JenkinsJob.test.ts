@@ -8,394 +8,806 @@ let emptyResourceLocation:string = '../resource/EmptyResponse.json';
 
 describe("Test JenkinsJob fromJsonString", () => {
     
-    it("works if getJsonData returns correct results", () => {
+    it("works if getJsonData returns correct results (fromJsonString)", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.getJsonData()).toEqual(JSON.stringify(jsonObject));
     });
     
-    it("works if _class property is correctly parsed", () => {
+    it("works if getJsonData returns correct results", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.getJsonData()).toEqual(JSON.stringify(jsonObject));
+    });
+    
+    it("works if _class property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job._class).toBe(jsonObject['_class']);
     });
     
-    it("works if actions property is correctly parsed", () => {
+    it("works if _class property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job._class).toBe(jsonObject['_class']);
+    });
+    
+    it("works if actions property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.actions).toEqual(jsonObject['actions']);
     });
     
-    it("works if description property is correctly parsed", () => {
+    it("works if actions property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.actions).toEqual(jsonObject['actions']);
+    });
+    
+    it("works if description property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.description).toBe(jsonObject['description']);
     });
     
-    it("works if displayName property is correctly parsed", () => {
+    it("works if description property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.description).toBe(jsonObject['description']);
+    });
+    
+    it("works if displayName property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.displayName).toBe(jsonObject['displayName']);
     });
     
-    it("works if displayNameOrNull property is correctly parsed", () => {
+    it("works if displayName property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.displayName).toBe(jsonObject['displayName']);
+    });
+    
+    it("works if displayNameOrNull property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.displayNameOrNull).toBe(jsonObject['displayNameOrNull']);
     });
     
-    it("works if fullDisplayName property is correctly parsed", () => {
+    it("works if displayNameOrNull property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.displayNameOrNull).toBe(jsonObject['displayNameOrNull']);
+    });
+    
+    it("works if fullDisplayName property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.fullDisplayName).toBe(jsonObject['fullDisplayName']);
     });
     
-    it("works if fullName property is correctly parsed", () => {
+    it("works if fullDisplayName property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.fullDisplayName).toBe(jsonObject['fullDisplayName']);
+    });
+    
+    it("works if fullName property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.fullName).toBe(jsonObject['fullName']);
     });
     
-    it("works if name property is correctly parsed", () => {
+    it("works if fullName property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.fullName).toBe(jsonObject['fullName']);
+    });
+    
+    it("works if name property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.name).toBe(jsonObject['name']);
     });
     
-    it("works if url property is correctly parsed", () => {
+    it("works if name property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.name).toBe(jsonObject['name']);
+    });
+    
+    it("works if url property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.url).toBe(jsonObject['url']);
     });
     
-    it("works if buildable property is correctly parsed", () => {
+    it("works if url property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.url).toBe(jsonObject['url']);
+    });
+    
+    it("works if buildable property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.buildable).toBe(jsonObject['buildable']);
     });
     
-    it("works if color property is correctly parsed", () => {
+    it("works if buildable property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.buildable).toBe(jsonObject['buildable']);
+    });
+    
+    it("works if color property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.color).toBe(jsonObject['color']);
     });
     
-    it("works if healthReport property is correctly parsed", () => {
+    it("works if color property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.color).toBe(jsonObject['color']);
+    });
+    
+    it("works if healthReport property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.healthReport).toEqual(jsonObject['healthReport']);
     });
     
-    it("works if inQueue property is correctly parsed", () => {
+    it("works if healthReport property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.healthReport).toEqual(jsonObject['healthReport']);
+    });
+    
+    it("works if inQueue property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.inQueue).toBe(jsonObject['inQueue']);
     });
     
-    it("works if keepDependencies property is correctly parsed", () => {
+    it("works if inQueue property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.inQueue).toBe(jsonObject['inQueue']);
+    });
+    
+    it("works if keepDependencies property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.keepDependencies).toBe(jsonObject['keepDependencies']);
     });
     
-    it("works if nextBuildNumber property is correctly parsed", () => {
+    it("works if keepDependencies property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.keepDependencies).toBe(jsonObject['keepDependencies']);
+    });
+    
+    it("works if nextBuildNumber property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.nextBuildNumber).toBe(jsonObject['nextBuildNumber']);
     });
     
-    it("works if property property is correctly parsed", () => {
+    it("works if nextBuildNumber property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.nextBuildNumber).toBe(jsonObject['nextBuildNumber']);
+    });
+    
+    it("works if property property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.property).toEqual(jsonObject['property']);
     });
     
-    it("works if queueItem property is correctly parsed", () => {
+    it("works if property property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.property).toEqual(jsonObject['property']);
+    });
+    
+    it("works if queueItem property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.queueItem).toEqual(jsonObject['queueItem']);
     });
     
-    it("works if concurrentBuild property is correctly parsed", () => {
+    it("works if queueItem property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.queueItem).toEqual(jsonObject['queueItem']);
+    });
+    
+    it("works if concurrentBuild property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.concurrentBuild).toBe(jsonObject['concurrentBuild']);
     });
     
-    it("works if scm property is correctly parsed", () => {
+    it("works if concurrentBuild property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.concurrentBuild).toBe(jsonObject['concurrentBuild']);
+    });
+    
+    it("works if scm property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.scm).toEqual(jsonObject['scm']);
     });
     
-    it("works if modules property is correctly parsed", () => {
+    it("works if scm property is correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.scm).toEqual(jsonObject['scm']);
+    });
+    
+    it("works if modules property is correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
         
         expect(job.modules).toEqual(jsonObject['modules']);
     });
     
-    it("works if name property is not set when not present in JSON", () => {
+    it("works if modules property is correctly parsed", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
+        
+        expect(job.modules).toEqual(jsonObject['modules']);
+    });
+    
+    it("works if name property is not set when not present in JSON (fromJsonString)", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.name).toBeUndefined();
     });
     
-    it("works if url property is not set when not present in JSON", () => {
+    it("works if name property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.name).toBeUndefined();
+    });
+    
+    it("works if url property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.url).toBeUndefined();
     });
     
-    it("works if _class property is not set when not present in JSON", () => {
+    it("works if url property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.url).toBeUndefined();
+    });
+    
+    it("works if _class property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job._class).toBeUndefined();
     });
     
-    it("works if displayName property is not set when not present in JSON", () => {
+    it("works if _class property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job._class).toBeUndefined();
+    });
+    
+    it("works if displayName property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.displayName).toBeUndefined();
     });
     
-    it("works if fullDisplayName property is not set when not present in JSON", () => {
+    it("works if displayName property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.displayName).toBeUndefined();
+    });
+    
+    it("works if fullDisplayName property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.fullDisplayName).toBeUndefined();
     });
     
-    it("works if description property is not set when not present in JSON", () => {
+    it("works if fullDisplayName property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.fullDisplayName).toBeUndefined();
+    });
+    
+    it("works if description property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.description).toBeUndefined();
     });
     
-    it("works if color property is not set when not present in JSON", () => {
+    it("works if description property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.description).toBeUndefined();
+    });
+    
+    it("works if color property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.color).toBeUndefined();
     });
     
-    it("works if buildable property is not set when not present in JSON", () => {
+    it("works if color property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.color).toBeUndefined();
+    });
+    
+    it("works if buildable property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.buildable).toBeUndefined();
     });
     
-    it("works if inQueue property is not set when not present in JSON", () => {
+    it("works if buildable property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.buildable).toBeUndefined();
+    });
+    
+    it("works if inQueue property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.inQueue).toBeUndefined();
     });
     
-    it("works if keepDependencies property is not set when not present in JSON", () => {
+    it("works if inQueue property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.inQueue).toBeUndefined();
+    });
+    
+    it("works if keepDependencies property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.keepDependencies).toBeUndefined();
     });
     
-    it("works if nextBuildNumber property is not set when not present in JSON", () => {
+    it("works if keepDependencies property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.keepDependencies).toBeUndefined();
+    });
+    
+    it("works if nextBuildNumber property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.nextBuildNumber).toBeUndefined();
     });
     
-    it("works if concurrentBuild property is not set when not present in JSON", () => {
+    it("works if nextBuildNumber property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.nextBuildNumber).toBeUndefined();
+    });
+    
+    it("works if concurrentBuild property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.concurrentBuild).toBeUndefined();
     });
     
-    it("works if displayNameOrNull property is not set when not present in JSON", () => {
+    it("works if concurrentBuild property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.concurrentBuild).toBeUndefined();
+    });
+    
+    it("works if displayNameOrNull property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.displayNameOrNull).toBeUndefined();
     });
     
-    it("works if fullName property is not set when not present in JSON", () => {
+    it("works if displayNameOrNull property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.displayNameOrNull).toBeUndefined();
+    });
+    
+    it("works if fullName property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.fullName).toBeUndefined();
     });
     
-    it("works if numberOfBuilds property is not set when not present in JSON", () => {
+    it("works if fullName property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.fullName).toBeUndefined();
+    });
+    
+    it("works if numberOfBuilds property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.numberOfBuilds).toBeUndefined();
     });
     
-    it("works if builds property is empty when not present in JSON", () => {
+    it("works if numberOfBuilds property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.numberOfBuilds).toBeUndefined();
+    });
+    
+    it("works if builds property is empty when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.builds).toBeDefined();
         expect(job.builds).toBeInstanceOf(Array);
         expect(job.builds.length).toBe(0);
     });
     
-    it("works if firstBuild property is not set from JSON", () => {
+    it("works if builds property is empty when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.builds).toBeDefined();
+        expect(job.builds).toBeInstanceOf(Array);
+        expect(job.builds.length).toBe(0);
+    });
+    
+    it("works if firstBuild property is not set from JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.firstBuild).toBeUndefined();
     });
     
-    it("works if lastBuild property is not set from JSON", () => {
+    it("works if firstBuild property is not set from JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.firstBuild).toBeUndefined();
+    });
+    
+    it("works if lastBuild property is not set from JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.lastBuild).toBeUndefined();
     });
     
-    it("works if lastCompletedBuild property is not set from JSON", () => {
+    it("works if lastBuild property is not set from JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.lastBuild).toBeUndefined();
+    });
+    
+    it("works if lastCompletedBuild property is not set from JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.lastCompletedBuild).toBeUndefined();
     });
     
-    it("works if lastFailedBuild property is not set from JSON", () => {
+    it("works if lastCompletedBuild property is not set from JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.lastCompletedBuild).toBeUndefined();
+    });
+    
+    it("works if lastFailedBuild property is not set from JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.lastFailedBuild).toBeUndefined();
     });
     
-    it("works if lastStableBuild property is not set from JSON", () => {
+    it("works if lastFailedBuild property is not set from JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.lastFailedBuild).toBeUndefined();
+    });
+    
+    it("works if lastStableBuild property is not set from JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.lastStableBuild).toBeUndefined();
     });
     
-    it("works if lastSuccessfulBuild property is not set from JSON", () => {
+    it("works if lastStableBuild property is not set from JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.lastStableBuild).toBeUndefined();
+    });
+    
+    it("works if lastSuccessfulBuild property is not set from JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.lastSuccessfulBuild).toBeUndefined();
     });
     
-    it("works if lastUnstableBuild property is not set from JSON", () => {
+    it("works if lastSuccessfulBuild property is not set from JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.lastSuccessfulBuild).toBeUndefined();
+    });
+    
+    it("works if lastUnstableBuild property is not set from JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.lastUnstableBuild).toBeUndefined();
     });
     
-    it("works if lastUnsuccessfulBuild property is not set from JSON", () => {
+    it("works if lastUnstableBuild property is not set from JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.lastUnstableBuild).toBeUndefined();
+    });
+    
+    it("works if lastUnsuccessfulBuild property is not set from JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.lastUnsuccessfulBuild).toBeUndefined();
     });
     
-    it("works if actions property is empty when not present in JSON", () => {
+    it("works if lastUnsuccessfulBuild property is not set from JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.lastUnsuccessfulBuild).toBeUndefined();
+    });
+    
+    it("works if actions property is empty when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.actions).toBeDefined();
         expect(job.actions).toBeInstanceOf(Array);
         expect(job.actions.length).toBe(0);
     });
     
-    it("works if healthReport property is empty when not present in JSON", () => {
+    it("works if actions property is empty when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.actions).toBeDefined();
+        expect(job.actions).toBeInstanceOf(Array);
+        expect(job.actions.length).toBe(0);
+    });
+    
+    it("works if healthReport property is empty when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.healthReport).toBeDefined();
         expect(job.healthReport).toBeInstanceOf(Array);
         expect(job.healthReport.length).toBe(0);
     });
     
-    it("works if property property is empty when not present in JSON", () => {
+    it("works if healthReport property is empty when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.healthReport).toBeDefined();
+        expect(job.healthReport).toBeInstanceOf(Array);
+        expect(job.healthReport.length).toBe(0);
+    });
+    
+    it("works if property property is empty when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.property).toBeDefined();
         expect(job.property).toBeInstanceOf(Array);
         expect(job.property.length).toBe(0);
     });
     
-    it("works if queueItem property is not set when not present in JSON", () => {
+    it("works if property property is empty when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.property).toBeDefined();
+        expect(job.property).toBeInstanceOf(Array);
+        expect(job.property.length).toBe(0);
+    });
+    
+    it("works if queueItem property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.queueItem).toBeUndefined();
     });
     
-    it("works if downstreamProjects property is empty when not present in JSON", () => {
+    it("works if queueItem property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.queueItem).toBeUndefined();
+    });
+    
+    it("works if downstreamProjects property is empty when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.downstreamProjects).toBeDefined();
         expect(job.downstreamProjects).toBeInstanceOf(Array);
         expect(job.downstreamProjects.length).toBe(0);
     });
     
-    it("works if upstreamProjects property is empty when not present in JSON", () => {
+    it("works if downstreamProjects property is empty when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.downstreamProjects).toBeDefined();
+        expect(job.downstreamProjects).toBeInstanceOf(Array);
+        expect(job.downstreamProjects.length).toBe(0);
+    });
+    
+    it("works if upstreamProjects property is empty when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.upstreamProjects).toBeDefined();
         expect(job.upstreamProjects).toBeInstanceOf(Array);
         expect(job.upstreamProjects.length).toBe(0);
     });
     
-    it("works if scm property is not set when not present in JSON", () => {
+    it("works if upstreamProjects property is empty when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.upstreamProjects).toBeDefined();
+        expect(job.upstreamProjects).toBeInstanceOf(Array);
+        expect(job.upstreamProjects.length).toBe(0);
+    });
+    
+    it("works if scm property is not set when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.scm).toBeUndefined();
     });
     
-    it("works if modules property is empty when not present in JSON", () => {
+    it("works if scm property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
-        let job:IJenkinsJob = getJob(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.scm).toBeUndefined();
+    });
+    
+    it("works if modules property is empty when not present in JSON (fromJsonString)", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(emptyResourceLocation);
         
         expect(job.modules).toBeDefined();
         expect(job.modules).toBeInstanceOf(Array);
         expect(job.modules.length).toBe(0);
     });
     
+    it("works if modules property is empty when not present in JSON", () => {
+        let jsonObject = require(emptyResourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(emptyResourceLocation);
+        
+        expect(job.modules).toBeDefined();
+        expect(job.modules).toBeInstanceOf(Array);
+        expect(job.modules.length).toBe(0);
+    });
+    
+    it("works if all JSON values are correctly parsed (fromJsonString)", () => {
+        let jsonObject = require(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJsonString(resourceLocation);
+        
+        expect(job._class).toBe(jsonObject['_class']);
+        expect(job.name).toBe(jsonObject['name']);
+        expect(job.url).toBe(jsonObject['url']);
+        expect(job.displayName).toBe(jsonObject['displayName']);
+        expect(job.fullDisplayName).toBe(jsonObject['fullDisplayName']);
+        expect(job.description).toBe(jsonObject['description']);
+        expect(job.color).toBe(jsonObject['color']);
+        expect(job.buildable).toBe(jsonObject['buildable']);
+        expect(job.inQueue).toBe(jsonObject['inQueue']);
+        expect(job.keepDependencies).toBe(jsonObject['keepDependencies']);
+        expect(job.nextBuildNumber).toBe(jsonObject['nextBuildNumber']);
+        expect(job.concurrentBuild).toBe(jsonObject['concurrentBuild']);
+        expect(job.displayNameOrNull).toBe(jsonObject['displayNameOrNull']);
+        expect(job.fullName).toBe(jsonObject['fullName']);
+        expect(job.numberOfBuilds).toBe(jsonObject['numberOfBuilds']);
+        expect(job.actions).toEqual(jsonObject['actions']);
+        expect(job.healthReport).toEqual(jsonObject['healthReport']);
+        expect(job.property).toEqual(jsonObject['property']);
+        expect(job.queueItem).toEqual(jsonObject['queueItem']);
+        expect(job.scm).toEqual(jsonObject['scm']);
+        expect(job.modules).toEqual(jsonObject['modules']);
+    });
+    
     it("works if all JSON values are correctly parsed", () => {
         let jsonObject = require(resourceLocation);
-        let job:IJenkinsJob = getJob(resourceLocation);
+        let job:IJenkinsJob = getJobUsingFromJson(resourceLocation);
         
         expect(job._class).toBe(jsonObject['_class']);
         expect(job.name).toBe(jsonObject['name']);
@@ -486,18 +898,33 @@ describe("Test JenkinsJob fromJsonString", () => {
     });
 });
 
-function getJSON(jsonLocation: string): string {
+function getJSONString(jsonLocation: string): string {
     let jsonObject = require(jsonLocation);
     let jsonText = JSON.stringify(jsonObject);
     
     return jsonText;
 }
 
-function getJob(jsonLocation:string):IJenkinsNode {
-    let jsonText = getJSON(jsonLocation);
+function getJSON(jsonLocation:string):string {
+    let json = require(jsonLocation);
+    
+    return json;
+}
+
+function getJobUsingFromJsonString(jsonLocation:string):IJenkinsNode {
+    let jsonText = getJSONString(jsonLocation);
 
     let job: IJenkinsJob = new JenkinsJob();
     job.fromJsonString(jsonText);
+
+    return job;
+}
+
+function getJobUsingFromJson(jsonLocation:string):IJenkinsNode {
+    let json = getJSON(jsonLocation);
+
+    let job: IJenkinsJob = new JenkinsJob();
+    job.fromJson(json);
 
     return job;
 }
