@@ -17,6 +17,7 @@ export interface IJenkinsData {
 export interface IJenkinsObject {
     _class:             string;
     getJsonData():      string;
+    fromJson(json:JSON): void;
     fromJsonString(json:string): void;
 };
 

@@ -4,7 +4,7 @@ import { IJenkinsChangeSet }    from './jenkins-api-ts-typings';
 import { IJenkinsUser }         from './jenkins-api-ts-typings';
 
 export class JenkinsChangeSet implements IJenkinsChangeSet {
-    jsonData:           string;
+    jsonData:           JSON;
     
     _class:             string;
     affectedPaths:      Array<string>;
@@ -26,12 +26,64 @@ export class JenkinsChangeSet implements IJenkinsChangeSet {
     }
     
     getJsonData(): string {
-        return this.jsonData;
+        return JSON.stringify(this.jsonData);
     }
     
     public fromJsonString(json: string) {
-        this.jsonData = json;
         let data:JSON = JSON.parse(json);
+        this.jsonData = data;
+        
+        if(data.hasOwnProperty("_class")) {
+            this._class = (data as any)["_class"];
+        }
+        
+        if(data.hasOwnProperty("affectedPaths")) {
+            let paths:Array<string> = ((data as any)["affectedPaths"]) as Array<string>;
+            
+            for(let affectedPath of paths) {
+                this.affectedPaths.push(affectedPath);
+            }
+        }
+        
+        if(data.hasOwnProperty("commitId")) {
+            this.commitId = (data as any)["commitId"];
+        }
+        
+        if(data.hasOwnProperty("timestamp")) {
+            this.timestamp = (data as any)["timestamp"];
+        }
+        
+        if(data.hasOwnProperty("authorEmail")) {
+            this.authorEmail = (data as any)["authorEmail"];
+        }
+        
+        if(data.hasOwnProperty("comment")) {
+            this.comment = (data as any)["comment"];
+        }
+        
+        if(data.hasOwnProperty("date")) {
+            this.date = new Date((data as any)["date"]);
+        }
+        
+        if(data.hasOwnProperty("id")) {
+            this.id = (data as any)["id"];
+        }
+        
+        if(data.hasOwnProperty("msg")) {
+            this.msg = (data as any)["msg"];
+        }
+        
+        if(data.hasOwnProperty("author")) {
+            this.authorData = (data as any)["author"];
+        }
+        
+        if(data.hasOwnProperty("paths")) {
+            this.paths = (data as any)["paths"];
+        }
+    }
+    
+    public fromJson(data: JSON) {
+        this.jsonData = data;
         
         if(data.hasOwnProperty("_class")) {
             this._class = (data as any)["_class"];
