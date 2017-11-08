@@ -1,6 +1,6 @@
 {
   "name": "jenkins-api-ts-typings",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Jenkins JSON API TypeScript Typings",
   "keywords": [
     "jenkins",
