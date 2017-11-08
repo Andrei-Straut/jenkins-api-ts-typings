@@ -25,29 +25,7 @@ export class JenkinsUser implements IJenkinsUser {
         let data:JSON = JSON.parse(json);
         this.jsonData = data;
         
-        if(data.hasOwnProperty("_class")) {
-            this._class = (data as any)["_class"];
-        }
-        
-        if(data.hasOwnProperty("fullName")) {
-            this.fullName = (data as any)["fullName"];
-        }
-        
-        if(data.hasOwnProperty("absoluteUrl")) {
-            this.absoluteUrl = (data as any)["absoluteUrl"];
-        }
-        
-        if(data.hasOwnProperty("description")) {
-            this.description = (data as any)["description"];
-        }
-        
-        if(data.hasOwnProperty("id")) {
-            this.id = (data as any)["id"];
-        }
-        
-        if(data.hasOwnProperty("property")) {
-            this.property = (data as any)["property"];
-        }
+        this.fromJson(data);
     }
     
     fromJson(data: JSON): void {

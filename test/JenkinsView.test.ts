@@ -6,7 +6,7 @@ import { JenkinsView        } from '../src/JenkinsView';
 let resourceLocation:string = '../resource/view/ViewFullResponse.json';
 let emptyResourceLocation:string = '../resource/EmptyResponse.json';
 
-describe("Test JenkinsView fromJsonString", () => {
+describe("Test JenkinsView", () => {
     
     it("works if getJsonData returns correct results (fromJsonString)", () => {
         let jsonObject = require(resourceLocation);

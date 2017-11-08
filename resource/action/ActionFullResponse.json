@@ -1,0 +1,31 @@
+{
+    "_class": "hudson.model.ParametersAction",
+    "parameters": [
+        {
+            "_class": "hudson.model.StringParameterValue",
+            "name": "BUILDJOB_NUMBER_PARAM",
+            "value": "214"
+        },
+        {
+            "_class": "hudson.model.StringParameterValue",
+            "name": "GIT_BRANCH_PARAM",
+            "value": "origin/some-branch"
+        },
+        {
+            "_class": "hudson.model.StringParameterValue",
+            "name": "TRIGGERED_BY",
+            "value": "ParameterizedBuild"
+        }
+    ],
+    "causes": [
+        {
+            "_class": "hudson.model.Cause$UpstreamCause",
+            "shortDescription": "Started by upstream project SomeUpstreamProject",
+            "upstreamBuild": 190,
+            "upstreamProject": "SomeUpstreamProject",
+            "upstreamUrl": "job/SomeUpstreamProject/"
+        }
+    ],
+    "queuingDurationMillis": 643572,
+    "totalDurationMillis": 2294910
+}
