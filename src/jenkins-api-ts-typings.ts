@@ -17,7 +17,7 @@ export interface IJenkinsData {
 export interface IJenkinsObject {
     _class:             string;
     getJsonData():      string;
-    fromJson(json:JSON): void;
+    fromJson(json:JSON):void;
     fromJsonString(json:string): void;
 };
 
@@ -155,4 +155,11 @@ export interface IJenkinsView extends IJenkinsObject {
     jobs:               Array<IJenkinsJob>;
     
     property:           Array<any>;
+};
+
+export interface IJenkinsAction extends IJenkinsObject {
+    data:               Map<string, any>;
+    isClass(className:string):boolean;
+    has(keyName:string):boolean;
+    get(keyName:string):any;
 };

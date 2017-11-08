@@ -6,7 +6,7 @@ import { JenkinsChangeSet       } from '../src/JenkinsChangeSet';
 let resourceLocation:string = '../resource/changeset/ChangeSetFullResponse.json';
 let emptyResourceLocation:string = '../resource/EmptyResponse.json';
 
-describe("Test JenkinsChangeSet fromJsonString", () => {
+describe("Test JenkinsChangeSet", () => {
     
     it("works if getJsonData returns correct results (fromJsonString)", () => {
         let jsonObject = require(emptyResourceLocation);

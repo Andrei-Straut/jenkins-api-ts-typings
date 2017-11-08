@@ -6,7 +6,7 @@ import { JenkinsNode            } from '../src/JenkinsNode';
 let resourceLocation:string = '../resource/node/NodeFullResponse.json';
 let emptyResourceLocation:string = '../resource/EmptyResponse.json';
 
-describe("Test JenkinsNode fromJsonString", () => {
+describe("Test JenkinsNode", () => {
     
     it("works if getJsonData returns correct results (fromJsonString)", () => {
         let jsonObject = require(emptyResourceLocation);

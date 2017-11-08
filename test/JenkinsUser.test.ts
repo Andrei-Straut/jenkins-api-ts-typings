@@ -6,7 +6,7 @@ import { JenkinsUser        } from '../src/JenkinsUser';
 let resourceLocation:string = '../resource/user/UserFullResponse.json';
 let emptyResourceLocation:string = '../resource/EmptyResponse.json';
 
-describe("Test JenkinsUser fromJsonString", () => {
+describe("Test JenkinsUser", () => {
     
     it("works if getJsonData returns correct results (fromJsonString)", () => {
         let jsonObject = require(resourceLocation);
