@@ -4,6 +4,7 @@ export { JenkinsChangeSet   } from './JenkinsChangeSet';
 export { JenkinsBuild       } from './JenkinsBuild';
 export { JenkinsJob         } from './JenkinsJob';
 export { JenkinsView        } from './JenkinsView';
+export { JenkinsAction      } from './JenkinsAction';
 
 export interface IJenkinsData {
     jobs:               Array<IJenkinsJob>;
