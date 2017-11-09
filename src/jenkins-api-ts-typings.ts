@@ -119,7 +119,7 @@ export interface IJenkinsJob extends IJenkinsObject {
     builtOn:            string;
     changeSets:         Array<IJenkinsChangeSet>;
     
-    actions:            Array<any>;
+    actions:            Array<IJenkinsAction>;
     artifacts:          Array<any>;
     executor:           Array<any>;
     culprits:           Array<any>;
