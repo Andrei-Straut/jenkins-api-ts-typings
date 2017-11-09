@@ -36,20 +36,6 @@ describe("Test JenkinsBuild", () => {
         expect(build._class).toBe(jsonObject['_class']);
     });
     
-    it("works if actions property is correctly parsed (fromJsonString)", () => {
-        let jsonObject = require(resourceLocation);
-        let build:IJenkinsBuild = getBuildUsingFromJsonString(resourceLocation);
-        
-        expect(build.actions).toEqual(jsonObject['actions']);
-    });
-    
-    it("works if actions property is correctly parsed", () => {
-        let jsonObject = require(resourceLocation);
-        let build:IJenkinsBuild = getBuildUsingFromJson(resourceLocation);
-        
-        expect(build.actions).toEqual(jsonObject['actions']);
-    });
-    
     it("works if artifacts property is correctly parsed (fromJsonString)", () => {
         let jsonObject = require(resourceLocation);
         let build:IJenkinsBuild = getBuildUsingFromJsonString(resourceLocation);
@@ -680,7 +666,6 @@ describe("Test JenkinsBuild", () => {
         expect(build.builtOn).toBe(jsonObject['builtOn']);
         expect(build.mavenVersionUsed).toBe(jsonObject['mavenVersionUsed']);
         
-        expect(build.actions).toEqual(jsonObject['actions']);
         expect(build.artifacts).toEqual(jsonObject['artifacts']);
         expect(build.mavenArtifacts).toEqual(jsonObject['mavenArtifacts']);
         expect(build.executor).toEqual(jsonObject['executor']);
@@ -709,7 +694,6 @@ describe("Test JenkinsBuild", () => {
         expect(build.builtOn).toBe(jsonObject['builtOn']);
         expect(build.mavenVersionUsed).toBe(jsonObject['mavenVersionUsed']);
         
-        expect(build.actions).toEqual(jsonObject['actions']);
         expect(build.artifacts).toEqual(jsonObject['artifacts']);
         expect(build.mavenArtifacts).toEqual(jsonObject['mavenArtifacts']);
         expect(build.executor).toEqual(jsonObject['executor']);
