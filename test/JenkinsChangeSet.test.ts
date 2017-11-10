@@ -9,15 +9,15 @@ let emptyResourceLocation:string = '../resource/EmptyResponse.json';
 describe("Test JenkinsChangeSet", () => {
     
     it("works if getJsonData returns correct results (fromJsonString)", () => {
-        let jsonObject = require(emptyResourceLocation);
-        let changeSet:IJenkinsChangeSet = getChangeSetUsingFromJsonString(emptyResourceLocation);
+        let jsonObject = require(resourceLocation);
+        let changeSet:IJenkinsChangeSet = getChangeSetUsingFromJsonString(resourceLocation);
         
         expect(changeSet.getJsonData()).toEqual(JSON.stringify(jsonObject));
     });
     
     it("works if getJsonData returns correct results", () => {
-        let jsonObject = require(emptyResourceLocation);
-        let changeSet:IJenkinsChangeSet = getChangeSetUsingFromJson(emptyResourceLocation);
+        let jsonObject = require(resourceLocation);
+        let changeSet:IJenkinsChangeSet = getChangeSetUsingFromJson(resourceLocation);
         
         expect(changeSet.getJsonData()).toEqual(JSON.stringify(jsonObject));
     });

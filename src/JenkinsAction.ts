@@ -8,6 +8,8 @@ export class JenkinsAction implements IJenkinsAction {
     _class:             string;
     data:               Map<string, any>;
     
+    private readonly timeInQueueClassName:string = "jenkins.metrics.impl.TimeInQueueAction";
+    
     constructor() {
         this.data = new Map<string, any>();
     }
@@ -24,6 +26,10 @@ export class JenkinsAction implements IJenkinsAction {
             return false;
         }
         return this._class.toLowerCase().trim() === className.toLowerCase().trim();
+    }
+    
+    public isTimeInQueueActionClass() {
+        return this.isClass(this.timeInQueueClassName);
     }
     
     public has(keyName:string):boolean {

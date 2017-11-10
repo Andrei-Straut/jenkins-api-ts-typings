@@ -2,6 +2,7 @@
 
 import { IJenkinsJob }          from './jenkins-api-ts-typings';
 import { IJenkinsBuild }        from './jenkins-api-ts-typings';
+import { IJenkinsHealthReport } from './jenkins-api-ts-typings';
 
 export class JenkinsJob implements IJenkinsJob {
     jsonData:           JSON;
@@ -31,9 +32,9 @@ export class JenkinsJob implements IJenkinsJob {
     lastSuccessfulBuild:IJenkinsBuild;
     lastUnstableBuild:  IJenkinsBuild;
     lastUnsuccessfulBuild: IJenkinsBuild;
+    healthReport:       Array<IJenkinsHealthReport>;
     
     actions:            Array<any>;
-    healthReport:       Array<any>;
     property:           Array<any>;
     queueItem:          any;
     downstreamProjects: Array<any>;

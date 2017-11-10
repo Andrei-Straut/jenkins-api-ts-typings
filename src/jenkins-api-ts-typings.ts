@@ -4,7 +4,10 @@ export { JenkinsChangeSet   } from './JenkinsChangeSet';
 export { JenkinsBuild       } from './JenkinsBuild';
 export { JenkinsJob         } from './JenkinsJob';
 export { JenkinsView        } from './JenkinsView';
+export { JenkinsHealthReport} from './JenkinsHealthReport';
 export { JenkinsAction      } from './JenkinsAction';
+export { JenkinsTimeInQueueAction
+                            } from './JenkinsTimeInQueueAction';
 
 export interface IJenkinsData {
     jobs:               Array<IJenkinsJob>;
@@ -13,6 +16,7 @@ export interface IJenkinsData {
     views:              Array<IJenkinsView>;
     nodes:              Array<IJenkinsNode>;
     changeSets:         Map<IJenkinsBuild, Array<IJenkinsChangeSet>>;
+    actions:            Map<IJenkinsBuild, Array<IJenkinsAction>>;
  };
 
 export interface IJenkinsObject {

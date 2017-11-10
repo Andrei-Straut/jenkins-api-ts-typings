@@ -4,7 +4,7 @@
 NPM: https://www.npmjs.com/package/jenkins-api-ts-typings  
 Jenkins: https://www.andreistraut.info/jenkins/view/Jenkins%20TS%20Typings/
 
-This library offers a set of classes to use when working with Jenkins JSON API. Jenkins Job, Build, Actions, User, View, Changeset and Node / Computer are supported
+This library offers a set of classes to use when working with Jenkins JSON API. Jenkins Job, Build, Actions, Health Report, User, View, Changeset and Node / Computer are supported
 
 ## Installation and usage
 

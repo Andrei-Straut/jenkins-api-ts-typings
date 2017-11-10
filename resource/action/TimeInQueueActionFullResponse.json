@@ -1,0 +1,5 @@
+{
+    "_class": "jenkins.metrics.impl.TimeInQueueAction",
+    "queuingDurationMillis": 284544,
+    "totalDurationMillis": 680151
+}
