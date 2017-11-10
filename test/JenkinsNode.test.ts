@@ -9,15 +9,15 @@ let emptyResourceLocation:string = '../resource/EmptyResponse.json';
 describe("Test JenkinsNode", () => {
     
     it("works if getJsonData returns correct results (fromJsonString)", () => {
-        let jsonObject = require(emptyResourceLocation);
-        let node:IJenkinsNode = getNodeUsingFromJsonString(emptyResourceLocation);
+        let jsonObject = require(resourceLocation);
+        let node:IJenkinsNode = getNodeUsingFromJsonString(resourceLocation);
         
         expect(node.getJsonData()).toEqual(JSON.stringify(jsonObject));
     });
     
     it("works if getJsonData returns correct results", () => {
-        let jsonObject = require(emptyResourceLocation);
-        let node:IJenkinsNode = getNodeUsingFromJson(emptyResourceLocation);
+        let jsonObject = require(resourceLocation);
+        let node:IJenkinsNode = getNodeUsingFromJson(resourceLocation);
         
         expect(node.getJsonData()).toEqual(JSON.stringify(jsonObject));
     });
