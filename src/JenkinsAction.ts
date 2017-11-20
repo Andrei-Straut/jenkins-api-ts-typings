@@ -47,7 +47,7 @@ export class JenkinsAction implements IJenkinsAction {
     }
     
     public fromJsonString(json: string) {
-        let data:JSON = JSON.parse(json);
+        var data:JSON = JSON.parse(json);
         this.jsonData = data;
         
         this.fromJson(data);
@@ -60,7 +60,7 @@ export class JenkinsAction implements IJenkinsAction {
             this._class = (data as any)["_class"];
         }
         
-        let objectData:Map<string, any> = new Map<string, any>();
+        var objectData:Map<string, any> = new Map<string, any>();
         Object.keys(data).filter(key => key !== "_class").forEach(function(key) {
             objectData.set(key, (data as any)[key]);
         });

@@ -23,7 +23,8 @@ export interface IJenkinsObject {
     _class:             string;
     getJsonData():      string;
     fromJson(json:JSON):void;
-    fromJsonString(json:string): void;
+    fromJsonString(json:string):
+                        void;
 };
 
 export interface IJenkinsUser extends IJenkinsObject {
@@ -164,7 +165,10 @@ export interface IJenkinsView extends IJenkinsObject {
 
 export interface IJenkinsAction extends IJenkinsObject {
     data:               Map<string, any>;
-    isClass(className:string):boolean;
+    isClass(className:string):
+                        boolean;
+    isTimeInQueueActionClass():
+                        boolean;
     has(keyName:string):boolean;
     get(keyName:string):any;
 };
