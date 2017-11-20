@@ -39,7 +39,7 @@ export class JenkinsNode implements IJenkinsNode{
     }
     
     public fromJsonString(json: string) {
-        let data:JSON = JSON.parse(json);
+        var data:JSON = JSON.parse(json);
         this.jsonData = data;
         
         this.fromJson(data);

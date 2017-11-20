@@ -30,7 +30,7 @@ export class JenkinsChangeSet implements IJenkinsChangeSet {
     }
     
     public fromJsonString(json: string) {
-        let data:JSON = JSON.parse(json);
+        var data:JSON = JSON.parse(json);
         this.jsonData = data;
         
         this.fromJson(data);
@@ -44,9 +44,9 @@ export class JenkinsChangeSet implements IJenkinsChangeSet {
         }
         
         if(data.hasOwnProperty("affectedPaths")) {
-            let paths:Array<string> = ((data as any)["affectedPaths"]) as Array<string>;
+            var paths:Array<string> = ((data as any)["affectedPaths"]) as Array<string>;
             
-            for(let affectedPath of paths) {
+            for(var affectedPath of paths) {
                 this.affectedPaths.push(affectedPath);
             }
         }
