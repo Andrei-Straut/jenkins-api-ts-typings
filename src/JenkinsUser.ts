@@ -22,7 +22,7 @@ export class JenkinsUser implements IJenkinsUser {
     }
     
     fromJsonString(json: string): void {
-        var data:JSON = JSON.parse(json);
+        const data:JSON = JSON.parse(json);
         this.jsonData = data;
         
         this.fromJson(data);
