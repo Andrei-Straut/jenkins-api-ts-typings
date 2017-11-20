@@ -57,7 +57,7 @@ export class JenkinsJob implements IJenkinsJob {
     }
     
     public fromJsonString(json: string): void {
-        var data:JSON = JSON.parse(json);
+        const data:JSON = JSON.parse(json);
         this.jsonData = data;
         
         this.fromJson(data);
