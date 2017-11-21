@@ -134,6 +134,12 @@ describe("Test JenkinsTimeInQueueAction", () => {
         expect(action.getQueuingDurationMillis()).toBe(0);
     });
     
+    it("works if queuingDurationMillis property is not set on instantiation", () => {
+        let action:IJenkinsAction = new JenkinsTimeInQueueAction();
+        
+        expect(action.getQueuingDurationMillis()).toBe(0);
+    });
+    
     it("works if totalDurationMillis property is not set when not present in JSON (fromJsonString)", () => {
         let jsonObject = require(emptyResourceLocation);
         let action:IJenkinsAction = getActionUsingFromJsonString(emptyResourceLocation);
@@ -144,6 +150,12 @@ describe("Test JenkinsTimeInQueueAction", () => {
     it("works if totalDurationMillis property is not set when not present in JSON", () => {
         let jsonObject = require(emptyResourceLocation);
         let action:IJenkinsAction = getActionUsingFromJson(emptyResourceLocation);
+        
+        expect(action.getTotalDurationMillis()).toBe(0);
+    });
+    
+    it("works if totalDurationMillis property is not set on instantiation", () => {
+        let action:IJenkinsAction = new JenkinsTimeInQueueAction();
         
         expect(action.getTotalDurationMillis()).toBe(0);
     });
@@ -248,10 +260,37 @@ describe("Test JenkinsTimeInQueueAction", () => {
         expect(action.isTimeInQueueActionClass()).toBeTruthy();
     });
     
-    it("works if isClass method returns correct results for undefined _class", () => {
+    it("works if isTimeInQueueActionClass method returns correct results after instantiation", () => {
         let action:IJenkinsAction = new JenkinsTimeInQueueAction();
         
         expect(action.isTimeInQueueActionClass()).toBeTruthy();
+    });
+    
+    it("works if has 'class' method returns correct results", () => {
+        let jsonObject = require(resourceLocation);
+        let action:IJenkinsAction = getActionUsingFromJson(resourceLocation);
+        
+        expect(action.has("_class")).toBeFalsy();
+    });
+    
+    it("works if has 'queuingDurationMillis' method returns correct results", () => {
+        let jsonObject = require(resourceLocation);
+        let action:IJenkinsAction = getActionUsingFromJson(resourceLocation);
+        
+        expect(action.has("queuingDurationMillis")).toBeTruthy();
+    });
+    
+    it("works if has 'totalDurationMillis' method returns correct results", () => {
+        let jsonObject = require(resourceLocation);
+        let action:IJenkinsAction = getActionUsingFromJson(resourceLocation);
+        
+        expect(action.has("totalDurationMillis")).toBeTruthy();
+    });
+    
+    it("works if isClass method returns correct results for after instantiation", () => {
+        let action:IJenkinsAction = new JenkinsTimeInQueueAction();
+        
+        expect(action.isClass("jenkins.metrics.impl.TimeInQueueAction")).toBeFalsy();
     });
     
 });

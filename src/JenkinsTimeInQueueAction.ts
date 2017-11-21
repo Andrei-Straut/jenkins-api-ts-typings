@@ -1,5 +1,4 @@
 
-
 import { JenkinsAction }       from './jenkins-api-ts-typings';
 
 export class JenkinsTimeInQueueAction extends JenkinsAction {

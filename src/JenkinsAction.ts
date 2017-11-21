@@ -8,7 +8,7 @@ export class JenkinsAction implements IJenkinsAction {
     _class:             string;
     data:               Map<string, any>;
     
-    private readonly timeInQueueClassName:string = "jenkins.metrics.impl.TimeInQueueAction";
+    protected readonly timeInQueueClassName:string = "jenkins.metrics.impl.TimeInQueueAction";
     
     constructor() {
         this.data = new Map<string, any>();
