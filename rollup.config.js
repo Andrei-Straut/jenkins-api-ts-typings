@@ -7,12 +7,12 @@ const camelCase = require('lodash.camelcase');
 const libraryName = 'jenkins-api-ts-typings';
 
 export default {
-  entry: `compiled/${libraryName}.js`,
-  targets: [
+  input: `compiled/${libraryName}.js`,
+  output: [
 	  { dest: pkg.main, moduleName: camelCase(libraryName), format: 'umd' },
 	  { dest: pkg.module, format: 'es' }
   ],
-  sourceMap: true,
+  sourcemap: true,
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
   external: [],
   plugins: [
