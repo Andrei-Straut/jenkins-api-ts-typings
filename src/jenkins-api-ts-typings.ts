@@ -8,6 +8,8 @@ export { JenkinsHealthReport} from './JenkinsHealthReport';
 export { JenkinsAction      } from './JenkinsAction';
 export { JenkinsTimeInQueueAction
                             } from './JenkinsTimeInQueueAction';
+export { JenkinsBuildStatus
+                            } from './JenkinsBuildStatus';
 
 export interface IJenkinsData {
     jobs:               Array<IJenkinsJob>;
